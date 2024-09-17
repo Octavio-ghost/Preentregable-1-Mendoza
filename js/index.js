@@ -1,57 +1,77 @@
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe y la página se recargue
 
-    // Obtener valores del formulario
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Credenciales de ejemplo (en un caso real, estas se verificarían en un servidor)
-    const correctUsername = "octavio5" ;
-    const correctPassword = "1234" ;
-
-    // Validar credenciales
-    if (username === correctUsername && password === correctPassword) {
-        document.getElementById('message').innerText = "Inicio de sesión exitoso!";
-        // Aquí podrías redirigir al usuario a una página protegida o hacer otra acción
-    } else {
-        document.getElementById('message').innerText = "Nombre de usuario o contraseña incorrectos.";
+class Impresion3DCalculadora {
+    constructor(formId, timeId, weightId, costPerHourId, materialCostId, resultId) {
+      this.form = document.getElementById(formId);
+      this.timeInput = document.getElementById(timeId);
+      this.weightInput = document.getElementById(weightId);
+      this.costPerHourInput = document.getElementById(costPerHourId);
+      this.materialCostInput = document.getElementById(materialCostId);
+      this.resultDisplay = document.getElementById(resultId);
+  
+      // Cargar los datos almacenados si existen
+      this.loadStoredData();
+  
+      // Inicializar el evento de envío del formulario
+      this.init();
     }
-});
-
-
-
-
-
-
-
-
-function calculateCost() {
-    // Obtener los valores de los campos de entrada
-    const costFilament = parseFloat(document.getElementById('costFilament').value);
-    const weightModel = parseFloat(document.getElementById('weightModel').value);
-    const timePrint = parseFloat(document.getElementById('timePrint').value);
-    const costPerHour = parseFloat(document.getElementById('costPerHour').value);
-    const additionalCosts = parseFloat(document.getElementById('additionalCost').value);
-
-    // Verificar si todos los campos tienen valores válidos
-    if (isNaN(costFilament) || isNaN(weightModel) || isNaN(timePrint) || isNaN(costPerHour) || isNaN(additionalCosts)) {
-        document.getElementById('result').innerText = "Por favor, completa todos los campos con valores válidos.";
-        return;
+  
+    init() {
+      this.form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        this.calculateCost();
+        this.storeData();
+      });
     }
-
-    // Calcular el costo del filamento
-    const costFilamentPerGram = costFilament / 1000;
-    const filamentCost = costFilamentPerGram * weightModel;
-
-    // Calcular el costo de impresión por tiempo
-    const timeCost = timePrint * costPerHour;
-
-    // Calcular el costo total
-    const totalCost = filamentCost + timeCost + additionalCosts;
-
-    // Mostrar el resultado
-    document.getElementById('result').innerText = `Costo total de impresión: $${totalCost.toFixed(2)}`;
-}
+  
+    calculateCost() {
+      const time = parseFloat(this.timeInput.value) || 0;
+      const weight = parseFloat(this.weightInput.value) || 0;
+      const costPerHour = parseFloat(this.costPerHourInput.value) || 0;
+      const materialCost = parseFloat(this.materialCostInput.value) || 0;
+  
+      const totalCost = (time * costPerHour) + (weight * materialCost);
+  
+      this.resultDisplay.textContent = `Costo total: $${totalCost.toFixed(2)}`;
+    }
+  
+    storeData() {
+      // Guardar los datos en localStorage
+      localStorage.setItem('3dPrintTime', this.timeInput.value);
+      localStorage.setItem('3dPrintWeight', this.weightInput.value);
+      localStorage.setItem('3dPrintCostPerHour', this.costPerHourInput.value);
+      localStorage.setItem('3dPrintMaterialCost', this.materialCostInput.value);
+    }
+  
+    loadStoredData() {
+      // Cargar datos desde localStorage (si existen)
+      if (localStorage.getItem('3dPrintTime')) {
+        this.timeInput.value = localStorage.getItem('3dPrintTime');
+      }
+  
+      if (localStorage.getItem('3dPrintWeight')) {
+        this.weightInput.value = localStorage.getItem('3dPrintWeight');
+      }
+  
+      if (localStorage.getItem('3dPrintCostPerHour')) {
+        this.costPerHourInput.value = localStorage.getItem('3dPrintCostPerHour');
+      }
+  
+      if (localStorage.getItem('3dPrintMaterialCost')) {
+        this.materialCostInput.value = localStorage.getItem('3dPrintMaterialCost');
+      }
+    }
+  }
+  
+  // Crear una instancia de la calculadora
+  const calculadora = new Impresion3DCalculadora(
+    'calculatorForm',
+    'time',
+    'weight',
+    'costPerHour',
+    'materialCost',
+    'totalCost'
+  );
+  
 
 

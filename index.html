@@ -16,38 +16,15 @@
     <h1>Calculadora de impresion 3D</h1>
 
 
-    <header class="header">
-        <!-- Barra de Navegación o Encabezado -->
-        <form id="loginForm">
-            <label for="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            <button class="Sesion" type="submit">Iniciar Sesión</button>
-        </form>
-    
-        <p id="message"></p>
-    
-
-    </header>
-
     <main>
-        <label for="costFilament">Costo del filameto por kg ($):</label>
-        <input type="number" id="costFilament" placeholder="Ej: 500" min="0">
-        
-        <label for="weightModel">Peso del modelo en gramos:</label>
-        <input type="number" id="weightModel" placeholder="Ej:10" min="0">
-        
-        <label for="timePrint">Tiempo de impresion en horas:</label>
-        <input type="number" id="timePrint" placeholder="Ej:2" min="0">
-        
-        <label for="marginforFail">Costo por horas:</label>
-        <input type="number" id="costPerHour" placeholder="Ej:40" min="0">
-        
-        <label for="costAddictional">Costos adiccionales ($):</label>
-        <input type="number" id="additionalCost" placeholder="Ej: 350" min="0">
-        <div id="result"></div>
-        <button onclick="calculateCost()">Calcular costo</button>
+        <form id="calculatorForm">
+            <input type="number" id="time" placeholder="Tiempo de impresión (horas)">
+            <input type="number" id="weight" placeholder="Peso del material (gramos)">
+            <input type="number" id="costPerHour" placeholder="Costo por hora ($)">
+            <input type="number" id="materialCost" placeholder="Costo del material por gramo ($)">
+            <div class="result" id="totalCost"></div>
+            <button type="submit">Calcular</button>
+        </form>
 
     </main>
     
