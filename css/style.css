@@ -1,52 +1,7 @@
-#calculatorForm {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-
-
-}
-
-h1 {
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    font-style: italic;
-}
-
-#time {
-    margin-bottom: 20px;
-    background-color: forestgreen;
+*{
+    margin: 0;
 }
 
 
-#weight {
-    margin-bottom: 20px;
-    background-color: orangered;
-}
-
-#costPerHour {
-    margin-bottom: 20px;
-    background-color: darkblue;
-}
-
-#materialCost {
-    margin-bottom: 20px;
-    background-color: crimson;
-}
-
-.result {
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    font-style: oblique;
-}
-
-button {
-    margin: 10px;
-    background-color: green;
-    color: white;
-}
+.modal{
+    display: none;}
