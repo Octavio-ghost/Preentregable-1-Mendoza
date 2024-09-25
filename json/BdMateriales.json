@@ -3,35 +3,35 @@
         "id": 1,
         "material": "PLA",
         "Precio": 14000,
-        "Peso": "1kg",
-        "url": "../img/PLA 1KG.jpeg"
+        "Peso": "1kg"
+        
     },
     {
         "id": 2,
         "material": "PLA",
         "Precio": 7400,
-        "Peso": "500gr",
-         "url": "../img/PLA 500G.jpeg"
+        "Peso": "500gr"
+         
     },
     {
         "id": 3,
         "material": "ABS",
         "Precio": 17500,
-        "Peso": "1kg",
-        "url":"../img/ABS 1KG.jpeg"
+        "Peso": "1kg"
+        
     },
     {
         "id": 4,
         "material": "TPU",
         "Precio": 200000,
-        "Peso": "1kg",
-        "url":"../img/TPU 1KG.jpeg"
+        "Peso": "1kg"
+        
     },
     {
         "id": 5,
         "material": "PetG",
         "Precio": 16500,
-        "Peso": "1kg",
-        "url":"../img/PETG.jpeg"
+        "Peso": "1kg"
+        
     }
 ]

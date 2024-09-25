@@ -6,49 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <h1>Calculadora de impresion 3d</h1>
+        <h1 class="titulo">Calculadora de impresion 3d</h1>
     </header>
     <main>
         <form>
-            <div> <input type="button" value="PLA 1KG" id="material1">
-                <input type="button" value="PLA 500G" id="material2">
-                <input type="button" value="ABS 1KG" id="material3">
-                <input type="button" value="TPU 1KG" id="material4">
-                <input type="button" value="PETG 1KG" id="material5">
+            <div class="seleccionMat">
+                <input class="buttonMat" type="button" value="PLA 1KG" id="material1">
+                <input class="buttonMat" type="button" value="PLA 500G" id="material2">
+                <input class="buttonMat" type="button" value="ABS 1KG" id="material3">
+                <input class="buttonMat" type="button" value="TPU 1KG" id="material4">
+                <input class="buttonMat" type="button" value="PETG 1KG" id="material5">
             </div>
-            <div id="modal1" class="modal">
+            <div id="modal1" class=" ajuste">
 
                 <span class="close-modal">&times;</span>
                 <h2 id="modalTitle"></h2>
-                <img id="modalImg" src="" alt="">
-                <p id="modalContent"></p>
+                <p id="modalContent" class="container"></p>
 
             </div>
+            <div class="interface">
+                <label for="tiempoImpresion">Tiempo de impresion en horas</label>
+                <input class="calcBtn" type="number" name="Tiempo de impresion" id="tiempoImpresion"
+                    placeholder="Ej:2 horas">
 
-            <label for="">Tiempo de impresion en horas</label>
-            <input type="number" name="Tiempo de impresion" id="TimeCost" placeholder="Ej:2 horas">
+                <label for="pesoFilamento">Peso del Filamento Usado (gramos):</label>
+                <input class="calcBtn" type="number" id="pesoFilamento" placeholder="Ej. 100">
 
-            <label for="">Peso en gramos (gr)</label>
-            <input type="number" id="WeightModel" placeholder="Ej:10 gr">
 
-            <label for="">Costo adicional ($)</label>
-            <input type="number" id="adittionalCost">
-            <section>
-                <article>
-                    <input type="button" value="Calcular ">
-                    <input type="button" value="Guardar ">
+                <label for="consumoEnergia">Consumo de Energía de la Impresora (kWh):</label>
+                <input class="calcBtn" type="number" id="consumoEnergia" placeholder="Ej. 0.1">
+
+                <label for="tarifaEnergia">Tarifa Eléctrica (ARG por kWh):</label>
+                <input class="calcBtn" type="number" id="tarifaEnergia" placeholder="Ej. 0.12" required>
+
+                <label for="costoDesgaste">Costo de Desgaste por hora (USD):</label>
+                <input class="calcBtn" type="number" id="costoDesgaste" placeholder="Ej. 0.05" required>
+            </div>
+            <section class="distrBtn">
+                <article class="btn-1">
+                    <input class="btn btn-secondary b1" type="button" value="Calcular " id="calcular">
+                </article>
+                <article class="btn-2">
+                    <input class="btn btn-primary b2" type="button" value="Guardar " id="guardar">
                 </article>
 
-                <article>
-                    <input type="button" value="Ver ultimo ">
-                </article>
 
-                <article>
-                    <input type="button" value="Ver todos los calculos anteriores">
+                <article class="btn-4">
+                    <input class="btn btn-danger b4" type="button" value="Ver todos los calculos" id="verDatos">
                 </article>
             </section>
 
@@ -57,7 +67,7 @@
 
         </form>
     </main>
-    <footer>
+    <footer class="footer">
         <p>Derechos reservados (Octavio Mendoza)</p>
     </footer>
 
@@ -65,7 +75,9 @@
     <script src="./js/index.js"></script>
 
     <!-- Boostrap -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
