@@ -8,7 +8,7 @@ async function cargarPrecios() {
   // Llenar el select con los materiales del JSON
   data.materiales.forEach(material => {
     const option = document.createElement('option');
-    option.value = material.BdMateriales;
+    option.value = material.precio;
     option.textContent = `${material.nombre} - $${material.precio} por kg`;
     selectMaterial.appendChild(option);
   });
@@ -37,7 +37,8 @@ function calcularCosto() {
 
   // Mostrar el resultado
   document.getElementById('resultado').innerHTML = `Costo Total: $${costoTotal}`;
+  
 }
 
-window.addEventListener('click', cargarPrecios(), { once: true })
+window.addEventListener('click', cargarPrecios, { once: true })
 document.getElementById('calcular').addEventListener('click', calcularCosto)
