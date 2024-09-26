@@ -1,37 +1,9 @@
-[
-    {
-        "id": 1,
-        "material": "PLA",
-        "Precio": 14000,
-        "Peso": "1kg"
-        
-    },
-    {
-        "id": 2,
-        "material": "PLA",
-        "Precio": 7400,
-        "Peso": "500gr"
-         
-    },
-    {
-        "id": 3,
-        "material": "ABS",
-        "Precio": 17500,
-        "Peso": "1kg"
-        
-    },
-    {
-        "id": 4,
-        "material": "TPU",
-        "Precio": 200000,
-        "Peso": "1kg"
-        
-    },
-    {
-        "id": 5,
-        "material": "PetG",
-        "Precio": 16500,
-        "Peso": "1kg"
-        
-    }
-]
+{
+    "materiales": [
+      { "nombre": "PLA", "precio": 14000 },
+      { "nombre": "ABS", "precio": 20000 },
+      { "nombre": "PETG", "precio": 17000 },
+      { "nombre": "TPU", "precio": 30000 }
+    ]
+  }
+  
