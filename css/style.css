@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    background-image: url(https://mastoner.com/blog/wp-content/uploads/2023/03/Como-colocar-filamento-en-impresora-3D.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    visibility: 50%;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    background-color: crimson;
+}
+
+.interface {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    margin: 40px;
+}
+
+.calcBtn {
+    background-color: whitesmoke;
+    margin: 20px;
+}
+
+label {
+    color: black;
+    background-color: yellowgreen;
+    margin: 10px;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#material {
+    color: white;
+    background-color: darkred;
+}
+
+option {
+    background-color: tomato;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(220, 20, 60, 0.671);
+    color: whitesmoke;
+}
+
+.p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    background-color: darkred;
+    height: 100px;
+    width: 400px;
+    font-size: xx-large;
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+
+}
+
+#resultado:hover {
+    background-color: black
+}
+
+.distrBtn {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 500px 100px;
+}

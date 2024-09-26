@@ -37,8 +37,17 @@ function calcularCosto() {
 
   // Mostrar el resultado
   document.getElementById('resultado').innerHTML = `Costo Total: $${costoTotal}`;
-  
+
+  localStorage.setItem('resultado', costoTotal)
+
 }
 
-window.addEventListener('click', cargarPrecios, { once: true })
-document.getElementById('calcular').addEventListener('click', calcularCosto)
+
+
+
+
+
+
+window.addEventListener('click', cargarPrecios, { once: true });
+document.getElementById('calcular').addEventListener('click', calcularCosto);
+

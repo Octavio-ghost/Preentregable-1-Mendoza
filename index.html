@@ -15,50 +15,49 @@
         <h1 class="titulo">Calculadora de impresion 3d</h1>
     </header>
     <main>
-        <form>
-            <label for="material">Selecciona el Material:</label>
-            <select id="material" >
-              <option value="">Selecciona un material</option>
-            </select>
 
-            
-            <div class="interface">
-                <label for="tiempoImpresion">Tiempo de impresion en horas</label>
-                <input class="calcBtn" type="number" name="Tiempo de impresion" id="tiempoImpresion"
-                    placeholder="Ej:2 horas">
-
-                <label for="pesoFilamento">Peso del Filamento Usado (gramos):</label>
-                <input class="calcBtn" type="number" id="pesoFilamento" placeholder="Ej. 100">
+        <label for="material">Selecciona el Material:</label>
+        <select id="material">
+            <option value="">Selecciona un material</option>
+        </select>
 
 
-                <label for="consumoEnergia">Consumo de Energía de la Impresora (kWh):</label>
-                <input class="calcBtn" type="number" id="consumoEnergia" placeholder="Ej. 0.1">
+        <div class="interface">
+            <label for="tiempoImpresion">Tiempo de impresion en horas</label>
+            <input class="calcBtn" type="number" name="Tiempo de impresion" id="tiempoImpresion"
+                placeholder="Ej:2 horas">
 
-                <label for="tarifaEnergia">Tarifa Eléctrica (ARG por kWh):</label>
-                <input class="calcBtn" type="number" id="tarifaEnergia" placeholder="Ej. 0.12" >
-
-                <label for="costoDesgaste">Costo de Desgaste por hora (ARG):</label>
-                <input class="calcBtn" type="number" id="costoDesgaste" placeholder="Ej. 0.05" >
-            </div>
-            <section class="distrBtn">
-                <article class="btn-1">
-                    <button type="button"  id="calcular">Calcular</button>
-                </article>
-                <article class="btn-2">
-                    <button type="button" id="guardar">Guardar</button>
-                </article>
+            <label for="pesoFilamento">Peso del Filamento Usado (gramos):</label>
+            <input class="calcBtn" type="number" id="pesoFilamento" placeholder="Ej. 100">
 
 
-                <article class="btn-4">
-                    <button type="button" id="verGuardados">Ver calculos anteriores</button>
-                </article>
-            </section>
+            <label for="consumoEnergia">Consumo de Energía de la Impresora (kWh):</label>
+            <input class="calcBtn" type="number" id="consumoEnergia" placeholder="Ej. 0.1">
+
+            <label for="tarifaEnergia">Tarifa Eléctrica (ARG por kWh):</label>
+            <input class="calcBtn" type="number" id="tarifaEnergia" placeholder="Ej. 0.12">
+
+            <label for="costoDesgaste">Costo de Desgaste por hora (ARG):</label>
+            <input class="calcBtn" type="number" id="costoDesgaste" placeholder="Ej. 0.05">
+        </div>
+        <section class="distrBtn">
+            <article class="btn-1">
+                <button class="btn btn-success btn-lg" type="button" id="calcular">Calcular</button>
+            </article>
 
 
+            <article class="btn-4">
+                <button class="btn btn-warning btn-lg" type="button" id="verGuardados">Ver calculo anterior</button>
+            </article>
+        </section>
+
+
+
+
+        <div class="p">
             <p id="resultado">Costo total:</p>
             <p id="guardado"></p>
-
-        </form>
+        </div>
     </main>
     <footer class="footer">
         <p>Derechos reservados (Octavio Mendoza)</p>
